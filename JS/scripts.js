@@ -12,9 +12,27 @@ $(function() {
         $("#pokemonInput").val("");
 
         //Remove old info from the Pokemon information list
-        $("pokemonInformationList").html("");
+        $("#pokemonInformationList").html("");
 
         getPokemonInfo(pokemonNameOrID);
+    });
+
+    $("#pokemonInput").keydown(function(event) {
+        if (event.keyCode === 13) {
+
+            event.preventDefault();
+
+            //Get the input from the search bar
+            let pokemonNameOrID = $("#pokemonInput").val().toLowerCase();
+
+            //Clear the input from the search bar
+            $("#pokemonInput").val("");
+
+            //Remove old info from the Pokemon information list
+            $("#pokemonInformationList").html("");
+
+            getPokemonInfo(pokemonNameOrID);
+        }
     });
 
     function determineBackgroundColor(type) {
