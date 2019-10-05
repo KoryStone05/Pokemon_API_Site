@@ -9,3 +9,14 @@
     float: right;
     margin-top: 0;
 } 
+
+#logo {
+    height: 100px;
+    margin-left: 10px;
+}
+
+#ash {
+    float: right;
+    height: 600px;
+    margin-right: 50px;
+}
